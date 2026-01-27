@@ -32,3 +32,15 @@ npm-debug.log*
 
 # Office Add-in debug files
 *.sideload.xml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+env/
+
+# Analytics database (generated)
+analytics/*.db

@@ -98,6 +98,22 @@
                     <FunctionName>validateData</FunctionName>
                   </Action>
                 </Control>
+
+                <Control xsi:type="Button" id="AnalyticsButton">
+                  <Label resid="AnalyticsButton.Label"/>
+                  <Supertip>
+                    <Title resid="AnalyticsButton.Label"/>
+                    <Description resid="AnalyticsButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="AnalyticsIcon.16x16"/>
+                    <bt:Image size="32" resid="AnalyticsIcon.32x32"/>
+                    <bt:Image size="80" resid="AnalyticsIcon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>openAnalytics</FunctionName>
+                  </Action>
+                </Control>
               </Group>
               <Label resid="ProjectSetupTab.Label"/>
             </CustomTab>
@@ -111,6 +127,9 @@
         <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
         <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
         <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+        <bt:Image id="AnalyticsIcon.16x16" DefaultValue="https://localhost:3000/assets/analytics-16.png"/>
+        <bt:Image id="AnalyticsIcon.32x32" DefaultValue="https://localhost:3000/assets/analytics-32.png"/>
+        <bt:Image id="AnalyticsIcon.80x80" DefaultValue="https://localhost:3000/assets/analytics-80.png"/>
       </bt:Images>
 
       <bt:Urls>
@@ -126,6 +145,7 @@
         <bt:String id="TaskpaneButton.Label" DefaultValue="Open Panel"/>
         <bt:String id="RunSetupButton.Label" DefaultValue="Run Setup"/>
         <bt:String id="ValidateDataButton.Label" DefaultValue="Validate Data"/>
+        <bt:String id="AnalyticsButton.Label" DefaultValue="Analytics"/>
       </bt:ShortStrings>
 
       <bt:LongStrings>
@@ -133,6 +153,7 @@
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens the Project Setup Tools panel"/>
         <bt:String id="RunSetupButton.Tooltip" DefaultValue="Runs the project setup automation"/>
         <bt:String id="ValidateDataButton.Tooltip" DefaultValue="Validates the data in the workbook"/>
+        <bt:String id="AnalyticsButton.Tooltip" DefaultValue="Opens the Renewable Energy Analytics Dashboard"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

@@ -82,6 +82,27 @@ async function validateData(event: Office.AddinCommands.Event): Promise<void> {
 }
 
 /**
+ * Open the Analytics Dashboard
+ * This function opens the Streamlit analytics dashboard in a new browser window
+ */
+async function openAnalytics(event: Office.AddinCommands.Event): Promise<void> {
+  try {
+    // Streamlit default port is 8501
+    const analyticsUrl = "http://localhost:8501";
+
+    // Open the analytics dashboard in a new browser window
+    window.open(analyticsUrl, "_blank", "noopener,noreferrer");
+
+    showNotification("Analytics", "Opening Renewable Energy Analytics Dashboard...");
+  } catch (error) {
+    showNotification("Error", `Failed to open analytics: ${error}`);
+  }
+
+  // Signal that the function is complete
+  event.completed();
+}
+
+/**
  * Show a notification to the user
  */
 function showNotification(title: string, message: string): void {
@@ -98,3 +119,4 @@ function showNotification(title: string, message: string): void {
 // Register functions with Office
 Office.actions.associate("runSetup", runSetup);
 Office.actions.associate("validateData", validateData);
+Office.actions.associate("openAnalytics", openAnalytics);

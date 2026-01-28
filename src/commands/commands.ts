@@ -5,6 +5,8 @@
 
 /* global Excel, Office */
 
+import { config } from "../config";
+
 Office.onReady(() => {
   // Office is ready
 });
@@ -87,11 +89,8 @@ async function validateData(event: Office.AddinCommands.Event): Promise<void> {
  */
 async function openAnalytics(event: Office.AddinCommands.Event): Promise<void> {
   try {
-    // Streamlit default port is 8501
-    const analyticsUrl = "http://localhost:8501";
-
     // Open the analytics dashboard in a new browser window
-    window.open(analyticsUrl, "_blank", "noopener,noreferrer");
+    window.open(config.ANALYTICS_URL, "_blank", "noopener,noreferrer");
 
     showNotification("Analytics", "Opening Renewable Energy Analytics Dashboard...");
   } catch (error) {

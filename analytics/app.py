@@ -17,6 +17,17 @@ import streamlit as st
 # Configuration
 DB_PATH = Path(__file__).parent / "renewable_energy.db"
 
+
+def init_database_if_needed():
+    """Initialize database with mock data if it doesn't exist."""
+    if not DB_PATH.exists():
+        from init_database import main as init_db
+        init_db()
+
+
+# Auto-initialize database on first run
+init_database_if_needed()
+
 st.set_page_config(
     page_title="Renewable Energy Analytics",
     page_icon="⚡",

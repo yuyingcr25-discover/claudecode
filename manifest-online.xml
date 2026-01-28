@@ -10,8 +10,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Project Setup Tools"/>
   <Description DefaultValue="Excel Add-in for Project Setup Workbook automation and tools"/>
-  <IconUrl DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-64.png"/>
+  <IconUrl DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-32.svg"/>
+  <HighResolutionIconUrl DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-64.svg"/>
   <SupportUrl DefaultValue="https://github.com/yuyingcr25-discover/claudecode"/>
 
   <AppDomains>
@@ -124,12 +124,12 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-80.png"/>
-        <bt:Image id="AnalyticsIcon.16x16" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/analytics-16.png"/>
-        <bt:Image id="AnalyticsIcon.32x32" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/analytics-32.png"/>
-        <bt:Image id="AnalyticsIcon.80x80" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/analytics-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-16.svg"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-32.svg"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/icon-80.svg"/>
+        <bt:Image id="AnalyticsIcon.16x16" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/analytics-16.svg"/>
+        <bt:Image id="AnalyticsIcon.32x32" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/analytics-32.svg"/>
+        <bt:Image id="AnalyticsIcon.80x80" DefaultValue="https://yuyingcr25-discover.github.io/claudecode/assets/analytics-80.svg"/>
       </bt:Images>
 
       <bt:Urls>

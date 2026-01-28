@@ -6,6 +6,7 @@ financial model evaluation and analysis.
 """
 
 import sqlite3
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -15,14 +16,23 @@ from plotly.subplots import make_subplots
 import streamlit as st
 
 # Configuration
-DB_PATH = Path(__file__).parent / "renewable_energy.db"
+ANALYTICS_DIR = Path(__file__).parent
+DB_PATH = ANALYTICS_DIR / "renewable_energy.db"
+
+# Add analytics directory to path for imports
+if str(ANALYTICS_DIR) not in sys.path:
+    sys.path.insert(0, str(ANALYTICS_DIR))
 
 
 def init_database_if_needed():
     """Initialize database with mock data if it doesn't exist."""
     if not DB_PATH.exists():
-        from init_database import main as init_db
-        init_db()
+        try:
+            from init_database import main as init_db
+            init_db()
+        except Exception as e:
+            st.error(f"Failed to initialize database: {e}")
+            st.stop()
 
 
 # Auto-initialize database on first run
